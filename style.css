@@ -44,9 +44,11 @@ li {
     display: flex;
     flex-direction: column;
   }
+
   header p {
     align-self: center;
   }
+
   header li {
     display: none;
   }
@@ -63,6 +65,38 @@ li {
   article p {
     text-align: justify;
   }
+
+  footer {
+    font-size: .5em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer p {
+    padding: 3%;
+    background-color: #ff8e6523;
+  }
+
+  footer p:first-of-type {
+    flex-grow: 1;
+    width: 30%;
+    color: #58ce74;
+  }
+
+  footer p:last-of-type {
+    flex-grow: 5;
+    width: 60%;
+  }
+
+  aside ul{
+    background-color: #ff8e6523;
+    padding: 3%;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -76,15 +110,18 @@ li {
     flex-direction: row;
     align-items: baseline;
   }
+
   header p {
     /* align-self: center; */
     text-align: center;
     flex-grow: 1;
   }
+
   header ul {
     display: flex;
     flex-direction: row;
   }
+
   header ul li {
     margin-right: 10px;
   }
