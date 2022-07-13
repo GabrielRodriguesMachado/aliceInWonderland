@@ -1,68 +1,111 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #3b331f;
+}
+
+header p {
+  font-weight: bold;
+  color: #ed6362;
+}
+
+aside h2,
+.main-content h1,
+footer h3 {
+  color: #dceb5b;
+}
+
+aside li,
+.main-content p,
+footer p,
+header li {
+  color: #58ce74;
+}
+
+li {
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
   body {
-    background-color: #3b331f;
+    font-size: 1.8em;
+    margin: 10px 6%;
   }
-  
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
   header p {
-    font-weight: bold;
-    color: #ed6362;
+    align-self: center;
   }
-  
-  aside h2,
-  .main-content h1,
-  footer h3 {
-    color: #dceb5b;
+  header li {
+    display: none;
   }
-  
-  aside li,
-  .main-content p,
-  footer p {
-    color: #58ce74;
+
+  hr {
+    width: 35%;
   }
-  
-  
-  @media screen and (max-width: 600px) {
-    body {
-      font-size: 1.8em;
-      margin: 10px 6%;
-    }
-  
-    header {
-      display: inline-block;
-      text-align: center;
-    }
-  
-    hr {
-      width: 35%;
-    }
-  
-    header li {
-      display: none;
-    }
-  
-    aside h2 {
-      display: flex;
-      justify-content: center;
-    }
-  
-    article p {
-      text-align: justify;
-    }
+
+  aside h2 {
+    display: flex;
+    justify-content: center;
   }
-  
-  @media screen and (min-width: 600px) {
-    body {
-      font-size: 20px;
-    }
+
+  article p {
+    text-align: justify;
   }
-  
-  @media screen and (min-width: 992px) {}
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.8em;
+    margin: 10px 6%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  header p {
+    /* align-self: center; */
+    text-align: center;
+    flex-grow: 1;
+  }
+  header ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header ul li {
+    margin-right: 10px;
+  }
+
+  hr {
+    width: 35%;
+  }
+
+  aside h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  aside {
+    width: 80%;
+    margin: auto;
+  }
+
+  article p {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 992px) {}
